@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<script>
+
+    function printNumbers(fine, tipo) {
+        let string = "";
+        if (typeof fine === "number" && typeof tipo === "string" && fine >= 1) {
+            if (tipo !== "D") {
+                for (i = 1; i <= fine; i++) {
+                    let result = i;
+                    if (i % 3 === 0) {
+                        string = " dot";
+                        result += string;
+                    }
+                    if (i % 5 === 0) {
+                        string = " cross";
+                        result += string;
+                    }
+                    console.log(result);
+                }
+            }
+            if (tipo === "D") {
+                for (i = 1; i <= fine; i++) {
+                    let result = i;
+                    if (i % 3 === 0) {
+                        string = " mar";
+                        result += string;
+                    }
+                    if (i % 5 === 0) {
+                        string = " print";
+                        result += string;
+                    }
+                    console.log(result);
+                }
+            }
+        } else {
+            throw new Error("Parametri non validi. Riprovare");
+        }
+    }
+
+    printNumbers(30, 3)
+
+</script>
+</body>
+</html>
